@@ -1,0 +1,38 @@
+.wrapper{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.item{
+	width: 300px;
+	overflow: hidden;
+	border: 1px solid #F47920;
+	padding: 2px;
+	margin: 10px;
+	box-shadow: 5px 0 20px 2px rgba(0,0,0,.3);
+}
+.item .pic{
+	width: 100%;
+}
+.item .pic img{
+	display: block;
+	width: 100%;
+}
+.item a.title{
+	display: block;
+	font: normal 24px/40px 微软雅黑;
+	text-align: center;
+	color: darkslategrey;
+	text-decoration: none;
+}
+.item .mydemo{
+	display: block;
+	width: 154px;
+	height: 55px;
+	margin: 20px auto;
+	background: url(../images/demo_btn.jpg);
+	transition: all .3s linear;
+}
+.item .mydemo:hover{
+	background: url(../images/demo_btn2.jpg);
+}

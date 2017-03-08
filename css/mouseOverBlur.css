@@ -1,0 +1,112 @@
+body{
+	font-family: "Segoe UI",'Microsoft Yahei',Helvetica,Arial;
+	font-size: 24px;
+}
+.box{
+	position: relative;
+	width: 983px;
+	height: 636px;
+}
+.caption{
+	width: 923px;
+	height: 576px;
+	z-index: 1;
+	position: absolute;
+	margin: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: all .3s;
+	/*box-shadow: 0 0 30px 20px rgba(0,0,0,.46);*/
+}
+.caption::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 0;
+	border: 3px solid #fff;
+	border-width: 0 3px;
+	overflow: hidden;
+	visibility: hidden;
+	transition: all .8s;
+	box-sizing: border-box;
+}
+.caption::after{
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 0;
+	height: 100%;
+	border: 3px solid #fff;
+	border-width: 3px 0;
+	/*overflow: hidden;*/
+	/*visibility: hidden;*/
+	transition: all .8s;
+	box-sizing: border-box;
+}
+.box:hover .caption{
+	box-shadow: 0 0 30px 20px rgba(0,0,0,.3);
+	opacity: 1;
+}
+.box:hover .caption::before{
+	height: 100%;
+	visibility: visible;
+	top: 0;
+}
+.box:hover .caption::after{
+	width: 100%;
+	visibility: visible;
+	left: 0;
+}
+.title{
+	text-align: center;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.26);
+	z-index: 2;
+	/*box-shadow: 0 0 30px 20px rgba(0,0,0,.46);*/
+}
+.title a{
+	display: block;
+}
+.streamer{
+	background-image: -webkit-linear-gradient(left,#3498db,#f47920 10%,#d71345 20%,#f7acbc 30%,#ffd400 40%,#3498db 50%,#f47920 60%,#d71345 70%,#f7acbc 80%,#ffd400 90%,#3498db);;
+	color: transparent;
+	-webkit-background-size: 200% 100%;/*背景图片向水平方向扩大一倍，这样background-position才有移动与变化的空间*/
+	-webkit-background-clip: text;/*规定背景的绘制区域*/
+	animation: streamer 5s infinite linear;
+}
+@keyframes streamer{
+	from{background-position: 0 0;}
+	to{background-position: -100% 0;}
+}
+.breathe{
+	color: #3498DB;
+	animation: breathe 5s infinite linear;
+}
+@keyframes breathe{
+	0%{color: #3498DB;}
+	50%{color: #f47920;}
+	100%{color: #3498DB;}
+}
+.slideIn{
+	opacity: 0;
+	transform: translate(0,20px);
+	transition: all .5s;
+}
+.box:hover .slideIn{
+	opacity: 1;
+	transform: translate(0);
+}
+.bg{
+	-webkit-filter: blur(0px);
+    filter: blur(0px);
+    transition: filter 1.5s;
+    transition: filter 1.5s,-webkit-filter 1.5s;
+}
+.box:hover .bg{
+	-webkit-filter: blur(3px);
+    filter: blur(3px);
+}
