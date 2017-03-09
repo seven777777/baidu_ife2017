@@ -20,10 +20,14 @@
 }
 .item a.title{
 	display: block;
-	font: normal 24px/40px 微软雅黑;
+	font: normal 22px/40px 微软雅黑;
 	text-align: center;
 	color: darkslategrey;
 	text-decoration: none;
+	height: 40px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .item .mydemo{
 	display: block;

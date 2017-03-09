@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>IFE2017 Js Task01</title>
+	</head>
+	<body>
+		<label>
+			请输入你今天的心情：
+			<input id="aqi-input" type="text" value="" />
+		</label>
+		<button id="button">确认填写</button>
+		<div>
+			您输入的值是：
+			<span id="aqi-display">尚无录入</span>
+		</div>
+		
+		<script type="text/javascript">
+			(function(){
+				var aqiDisplay=document.getElementById('aqi-display');
+				var btn=document.getElementById('button');
+				btn.addEventListener("click",function(){
+					aqiDisplay.innerHTML=document.getElementById('aqi-input').value;
+				});
+			})();
+		</script>
+	</body>
+</html>
