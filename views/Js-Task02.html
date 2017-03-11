@@ -48,11 +48,11 @@
 
 				
 				var aqiUl=document.getElementById("aqi-list");
+				var liLIST=document.createDocumentFragment();
 				for(var i=0;i<newArr.length;i++){
-					var liLIST=[];
 					var li=document.createElement("li");
-					li.innerHTML="第"+i+1+"名："+newArr[i][0]+","+newArr[i][1];
-					liLIST.push(li);
+					li.innerHTML="第"+(i+1)+"名："+newArr[i][0]+","+newArr[i][1];
+					liLIST.appendChild(li);
 				}
 				aqiUl.appendChild(liLIST);
 
