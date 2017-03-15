@@ -4,7 +4,7 @@
 	flex-wrap: wrap;
 }
 .item{
-	width: 300px;
+	width: 286px;
 	overflow: hidden;
 	border: 1px solid #F47920;
 	padding: 2px;
@@ -20,7 +20,7 @@
 }
 .item a.title{
 	display: block;
-	font: normal 22px/40px 微软雅黑;
+	font: normal 20px/40px 微软雅黑;
 	text-align: center;
 	color: darkslategrey;
 	text-decoration: none;

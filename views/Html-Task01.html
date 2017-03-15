@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>IFE2017 HTML Task01</title>
+		<style type="text/css">
+			body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+			body{
+				font: 12px "微软雅黑";
+				background: #dedede;
+			}
+			ul{list-style-type: none;}
+			.color62{ color: #626262;}
+			.color67{ color: #676767;}
+			nav{
+				position: relative;
+				width: 100%;
+				min-width: 570px;
+				height: 60px;
+				background: url(../images/logo.jpg) 40px center no-repeat #333;
+				color: #FFFFFF;
+			}
+			nav .home{
+				display: block;
+				position: absolute;
+				width:118px;
+				height: 60px;
+				left: 40px;
+				top: 0;
+			}
+			nav ul{
+				list-style-type: none;
+				float: right;
+			}
+			nav ul li{
+				float: left;
+				line-height: 60px;
+				font-size: 14px;
+				margin-right: 20px;
+			}
+			nav ul li a{
+				color: #fff;
+				text-decoration: none;
+			}
+			nav ul li a:hover{
+				color: #a7a7a7;
+			}
+			#content{
+				padding: 20px;
+				overflow: hidden;
+			}
+			.text_wrap{
+				min-width: 700px;
+				padding: 30px 20px;
+				border: 1px solid #bdbdbd;
+				border-right: 3px solid #848484;
+				border-bottom: 3px solid #a1a1a1;
+				background: #FFFFFF;
+				margin-bottom: 18px;
+			}
+			.text_wrap h1,
+			.text_wrap h2,
+			.text_wrap h3{
+				margin-bottom: 10px;
+				font-weight: normal;
+			}
+			.text_wrap p{text-indent: 2em;}
+			.text_wrap img{ margin: 10px 0;}
+			.nice_pic{
+				width: 100px;
+				border: 1px solid #ccc;
+				padding: 10px;
+			}
+			.nice_pic img{
+				width: 100px;
+				margin: 0;
+			}
+			.nice_pic p{
+				margin-bottom: 10px;
+			}
+			.text_wrap ol{
+				padding-left: 2em;
+				margin-bottom: 15px;
+			}
+			.text_wrap table{
+				border: 1px solid #CCCCCC;
+				border-bottom: 0;
+				border-right: 0;
+				width: 100%;
+			}
+			.text_wrap table td,.text_wrap table th{
+				border-right: 1px solid #CCCCCC;
+				border-bottom: 1px solid #CCCCCC;
+				padding: 5px;
+			}
+			.text_wrap table th{
+				background: #333;
+				color: #FFFFFF;
+			}
+			.text_wrap table tfoot{
+				background: #CCCCCC;
+			}
+			.sidebar{
+				min-width: 700px;
+				padding: 30px 20px;
+				border: 1px solid #bdbdbd;
+				border-right: 3px solid #848484;
+				border-bottom: 3px solid #a1a1a1;
+				background: #FFFFFF;
+				margin: 0 20px 18px 20px;
+			}
+			.sidebar .title{
+				border-left: 3px solid #CCCCCC;
+				height: 40px;
+				font: normal 16px/40px "微软雅黑";
+				color: #000;
+				padding-left: 10px;
+			}
+			.sidebar form .form_row{
+				font: normal 12px /30px "微软雅黑";
+				color: #000000;
+				margin-bottom: 5px;
+				overflow: hidden;
+			}
+			.sidebar form .form_row label{
+				width: 365px;
+				height: 30px;
+				padding-right: 10px;
+				text-align: right;
+				display: inline-block;
+				float: left;
+			}
+			.sidebar form .form_row .text{
+				float: left;
+			}
+			.sidebar form .form_row .tip{
+				color: #a3a3a3;
+				display: block;
+			}
+			.sidebar form .form_row .btn{
+				width: 100%;
+				background: #3355d0;
+				border-radius: 7px;
+				box-sizing: border-box;
+				border: 1px solid #c5cdcf;
+				height: 40px;
+				font: normal 16px/40px "微软雅黑";
+				color: #FFFFFF;
+				text-align: center;
+				cursor: pointer;
+			}
+			#footer{
+				width: 100%;
+				min-width: 570px;
+				height: 30px;
+				background: #000000;
+				text-align: center;
+				padding: 20px 0;
+				color: #FFFFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<a class="home" href="http://baidu.com"></a>
+			<ul>
+				<li><a href="javascript:void(0);">导航链接一</a></li>
+				<li><a href="javascript:void(0);">导航链接二</a></li>
+				<li><a href="javascript:void(0);">导航链接三</a></li>
+				<li><a href="javascript:void(0);">导航链接四</a></li>
+			</ul>
+		</nav>
+		
+		<div id="content">
+			<div class="text_wrap">
+				<h1>文章一级标题</h1>
+				<h2 class="color62">文章二级标题</h2>
+				<h3 class="color67">文章作者 文章发表时间</h3>
+				<p>
+					这是一个很长的段落,这是一个很长的段落,这是一个很长的段落这是一个很长的段落这是一个很长的段落这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落这是一个很长的段落这是一个很长的段落这是一个很长的段落,这是一个很长的段落,换行<br />
+					这是一个很长的段落,这是一个很长的段落,这是一个很长的段落这是一个很长的段落这是一个很长的段落,这是一个很长的段落,这是一个很长的段落，换行<br />
+					这是一个很长的段落这是一个很长的段落,<a href="http://ife.baidu.com/">这里有一个链接到百度学院</a>,这是一个很长的段落这是一个很长的段落这是一个很长的段落,这是一个很长的段落这是一个很长的段落这是一个很长的段落
+				</p>
+				<img src="../images/img01.jpg" />
+				<p>
+					这是一个很长的段落,这是一个很长的段落,这是一个很长的段落这是一个很长的段落这是一个很长的段落这是一个很长的段落,<b>这里有段粗体字</b>这是一个很长的段落,这是一个很长的段落,这是一个很长的段落这是一个很长的段落这是一个很长的段落这是一个很长的段落,这是一个很长的段落,换行<br />
+					这是一个很长的段落,这是一个很长的段落,这是一个很长的段落这是一个很长的段落这是一个很长的段落,这是一个很长的段落,这是一个很长的段落，换行<br />
+					这是一个很长的段落这是一个很长的段落,<a href="http://ife.baidu.com/" target="_blank">这里有一个链接,点击打开新窗口到百度学院</a>,这是一个很长的段落这是一个很长的段落这是一个很长的段落,这是一个很长的段落这是一个很长的段落这是一个很长的段落
+				</p>
+			</div>
+			<div class="text_wrap">
+				<h1>另一个文章一级标题</h1>
+				<h2 class="color62">文章二级标题</h2>
+				<h3 class="color67">文章作者 文章发表时间</h3>
+				<p>
+					这是一个很长的段落,这是一个很长的段落,这是一个很长的段落这是一个很长的段落这是一个很长的段落这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落这是一个很长的段落这是一个很长的段落这是一个很长的段落,这是一个很长的段落,换行<br />
+					这是一个很长的段落,这是一个很长的段落,这是一个很长的段落这是一个很长的段落这是一个很长的段落,这是一个很长的段落,这是一个很长的段落，换行<br />
+					这是一个很长的段落这是一个很长的段落,<a href="http://ife.baidu.com/">这里有一个链接到百度学院</a>,这是一个很长的段落这是一个很长的段落这是一个很长的段落,这是一个很长的段落这是一个很长的段落这是一个很长的段落
+				</p>
+				<img src="../images/img01.jpg" />
+				<ul>
+					<li>列表项目一</li>
+					<li>列表项目二</li>
+					<li>列表项目三</li>
+				</ul>
+			</div>
+			<div class="text_wrap">
+				<h1>图片</h1>
+				<figure class="nice_pic">
+				  <p>好看的图片</p>
+				  <img src="../images/img01.jpg" width="100" />
+				</figure>
+				<figure class="nice_pic">
+				  <p>好看的图片</p>
+				  <img src="../images/img01.jpg" width="100" />
+				</figure>
+				<figure class="nice_pic">
+				  <p>好看的图片</p>
+				  <img src="../images/img01.jpg" width="100" />
+				</figure>
+				<figure class="nice_pic">
+				  <p>好看的图片</p>
+				  <img src="../images/img01.jpg" width="100" />
+				</figure>
+				<figure class="nice_pic">
+				  <p>好看的图片</p>
+				  <img src="../images/img01.jpg" width="100" />
+				</figure>
+				<figure class="nice_pic">
+				  <p>好看的图片</p>
+				  <img src="../images/img01.jpg" width="100" />
+				</figure>
+			</div>
+			<div class="text_wrap">
+				<h1>这是最后一篇文章一级标题</h1>
+				<h2 class="color62">文章二级标题</h2>
+				<h3 class="color67">文章作者 文章发表时间</h3>
+				<ol>
+					<li>排名一</li>
+					<li>排名二</li>
+					<li>排名三</li>
+				</ol>
+				<table border="0" cellpadding="0" cellspacing="0">
+					<thead>
+						<tr align="left">
+							<th>表头</th>
+							<th>表头</th>
+							<th>表头</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>表内容单元格</td>
+							<td>表内容单元格</td>
+							<td><a href="/">操作</a></td>
+						</tr>
+						<tr>
+							<td>表内容单元格</td>
+							<td>表内容单元格</td>
+							<td><a href="/">操作</a></td>
+						</tr>
+						<tr>
+							<td>表内容单元格</td>
+							<td>表内容单元格</td>
+							<td><a href="/">操作</a></td>
+						</tr>
+						<tr>
+							<td>表内容单元格</td>
+							<td>表内容单元格</td>
+							<td><a href="/">操作</a></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>总计：</td>
+							<td colspan="2">1000</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+		<div class="sidebar">
+			<h1 class="title">这里以后是一个侧栏，这是侧栏的标题</h1>
+			<form>
+				<div class="form_row">
+					<label>请输入邮箱地址</label>
+					<div class="text">
+						<input type="email" placeholder="这是一个文本输入框" /><br />
+						<span class="tip">邮箱地址请按要求格式输入</span>
+					</div>
+				</div>
+				<div class="form_row">
+					<label>请输入密码</label>
+					<input type="password" />
+				</div>
+				<div class="form_row">
+					<label>请重复输入密码</label>
+					<div class="text">
+						<input type="password" />
+						<span class="tip">密码请为6-16位英文数字</span>
+					</div>
+				</div>
+				<div class="form_row">
+					<label>性别</label>
+					<input type="radio" checked="checked" name="Sex" value="male" />男
+					<input type="radio" name="Sex" value="female" />女
+				</div>
+				<div class="form_row">
+					<label>城市</label>
+					<select name="citys">
+						<option value="上海">上海</option>
+						<option value="北京">北京</option>
+						<option value="天津">天津</option>
+						<option value="江苏">江苏</option>
+					</select>
+				</div>
+				<div class="form_row">
+					<label>爱好</label>
+					<input type="checkbox" name="sport" />运动
+					<input type="checkbox" name="art" />艺术
+					<input type="checkbox" name="science" />科学
+				</div>
+				<div class="form_row">
+					<label>个人描述</label>
+					<textarea rows="5" cols="100" placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
+				</div>
+				<div class="form_row">
+					<button class="btn">确认提交</button>
+				</div>
+			</form>
+		</div>
+		<footer id="footer">版权所有©</footer>
+	</body>
+</html>
