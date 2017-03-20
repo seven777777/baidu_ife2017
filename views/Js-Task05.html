@@ -123,13 +123,15 @@
 //				var myList=document.createDocumentFragment();
 				var temp=[];
 				for(var i=0;i<liList.length;i++){
-					temp.push(liList[i].style.height)
+					var m=liList[i].style.height;
+					m=m.replace("px","");
+					temp.push(m);
 				}
 				temp.sort(function(a,b){
-					return a[0]-b[0];
+					return a-b;
 				});
 				for(var n=0;n<temp.length;n++){
-					liList[n].style.height=temp[n];
+					liList[n].style.height=temp[n]+"px";
 				}
 				return liList;
 			}
