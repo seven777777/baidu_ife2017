@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>IFE2017 Js Task04</title>
+		<title>IFE2017 Js Task05</title>
 		<style type="text/css">
 			ul{
 				list-style-type: none;
@@ -10,7 +10,7 @@
 			}
 			ul li{
 				display: inline-block;
-				padding: 15px;
+				width: 30px;
 				background: red;
 				color: #fff;
 				margin-right: 10px;
@@ -18,15 +18,14 @@
 		</style>
 	</head>
 	<body>
-		<input id="num" type="text" />
+		<input id="num" placeholder="输入一个10~100以内的数字" type="text" />
 		<button id="left_in">左侧入</button>
 		<button id="right_in">右侧入</button>
 		<button id="left_out">左侧出</button>
 		<button id="right_out">右侧出</button>
+		<button id="sort">排序</button>
 		
-		<ul id="num_wrap">
-			
-		</ul>
+		<ul id="num_wrap"></ul>
 		
 		<script type="text/javascript">
 			/*
@@ -38,30 +37,40 @@
 			var leftOut=document.getElementById("left_out");
 			var rightOut=document.getElementById("right_out");
 			var numList=document.getElementById("num_wrap");
+			var sortBtn=document.getElementById("sort");
 			
 			
 			function insertNum(){
-				if(num.value==""){
+				if(liList.length>59){
+					alert("队列元素数量最多限制为60个")
+				}else if(num.value==""||isNaN(num.value)){
 					alert("请输入一个数字");
-				}else if(!isNaN(num.value)){
+				}else if(num.value<=10||num.value>=100){
+					alert("请输入一个10~100以内的数字");
+				}else{
 					var addLi=document.createElement('li');
-					addLi.innerHTML=num.value;
+					addLi.style.height=num.value+"px";
 					numList.insertBefore(addLi,numList.firstChild);
 					num.value="";
-				}else{
-					alert("格式不对，请您重新输入一个数字！")
-				}
+				};
+				
 			}
 			function appendNum(){
-				if(num.value==""){
+				if(liList.length>59){
+					alert("队列元素数量最多限制为60个")
+				}else if(num.value==""||isNaN(num.value)){
 					alert("请输入一个数字");
-				}else if(!isNaN(num.value)){
+				}else if(num.value<=10||num.value>=100){
+					alert("请输入一个10~100以内的数字");
+				}else{
 					var addLi=document.createElement('li');
-					addLi.innerHTML=num.value;
+//					addLi.innerHTML=num.value;
+					addLi.style.height=num.value+"px";
 					numList.appendChild(addLi);
 					num.value="";
-				}else{
-					alert("格式不对，请您重新输入一个数字！")
+				};
+				if(liList.length>60){
+					alert("队列元素数量最多限制为60个")
 				}
 			}
 			
@@ -104,6 +113,29 @@
 					numList.removeChild(event.target);
 				}
 			})
+			
+			
+			/*排序*/
+			function mySort(){
+				if(liList.length<=1){
+					return liList;
+				};
+//				var myList=document.createDocumentFragment();
+				var temp=[];
+				for(var i=0;i<liList.length;i++){
+					temp.push(liList[i].style.height)
+				}
+				temp.sort(function(a,b){
+					return a[0]-b[0];
+				});
+				for(var n=0;n<temp.length;n++){
+					liList[n].style.height=temp[n];
+				}
+				return liList;
+			}
+			
+			sortBtn.addEventListener("click",mySort);
+			
 			
 		</script>
 	</body>
