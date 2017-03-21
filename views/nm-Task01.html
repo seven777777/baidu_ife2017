@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义checkbox， radio样式</title>
+		<style type="text/css">
+			#wrap{
+				width: 1000px;
+				margin: 0 auto;
+			}
+			#wrap h1{
+				font: normal 24px/50px "微软雅黑";
+				color: #2F4F4F;
+				border-bottom: 2px solid #DEDEDE;
+			}
+			#wrap .row{
+				margin-bottom: 10px;
+			}
+			#wrap .left_text{
+				display: inline-block;
+				width: 20%;
+				text-align: right;
+				font:normal 16px/30px "微软雅黑";
+				color: #333333;
+				margin-right: 10px;
+			}
+			
+			/*伪元素*/
+			
+			/*隐藏选项框*/
+			#wrap input[type='radio'],
+			#wrap input[type='checkbox']{
+				/*visibility: hidden;*/
+				display: none;
+				cursor: pointer;
+			}
+			/*设置label样式*/
+			.radio_a+label,.checkbox_a+label{
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 5px;
+				width: 16px;
+				height: 16px;
+				border: 1px solid #d9d9d9;
+				position: relative;
+			}
+			.radio_a+label{
+				border-radius: 50%;
+			}
+			.radio_a:checked+label,.checkbox_a:checked+label{
+				border: 1px solid #d73d32;
+			}
+			.radio_a:checked+label::after{
+				content: "\2022";
+			    color: #d73d32;
+			    font-size: 30px;
+			    text-align: center;
+			    line-height: 18px;
+			    margin-left: -1px;
+			}
+			.checkbox_a+label{
+				padding: 1px;
+			}
+			.checkbox_a:checked+label::after{
+				content: "\2713";
+			    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+			    font-size: 20px;
+			    color: #d73d32;
+			    text-align: center;
+			    line-height: 16px;
+			}
+			
+			/*雪碧图*/
+			.radio_b+label,.checkbox_b+label{
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 5px;
+				width: 16px;
+				height: 16px;
+				background: url(../images/icon.png);
+				background-repeat: no-repeat;
+			}
+			.radio_b:checked+label{background-position: -35px 0;}
+			.checkbox_b+label{background-position: -1px -23px;}
+			.checkbox_b:checked+label{background-position: -36px -22px;}
+		</style>
+	</head>
+	<body>
+		<form id="wrap">
+			<h1>1.使用伪元素实现：</h1>
+			<div class="row">
+				<div class="left_text">性别：</div>
+				<input class="radio_a" id="radio_a1" type="radio" name="sex" value="male" />
+				<label for="radio_a1"></label>
+				男
+				<input class="radio_a" id="radio_a2" type="radio" name="sex" value="female" />
+				<label for="radio_a2"></label>
+				女
+			</div>
+			<div class="row">
+				<div class="left_text">兴趣爱好：</div>
+				<input class="checkbox_a" id="checkbox_a1" type="checkbox" name="music" />
+				<label for="checkbox_a1"></label>
+				音乐
+				<input class="checkbox_a" id="checkbox_a2" type="checkbox" name="art" />
+				<label for="checkbox_a2"></label>
+				艺术
+				<input class="checkbox_a" id="checkbox_a3" type="checkbox" name="science" />
+				<label for="checkbox_a3"></label>
+				科学
+			</div>
+			<h1>2.使用雪碧图实现：</h1>
+			<div class="row">
+				<div class="left_text">性别：</div>
+				<input class="radio_b" id="radio_b1" type="radio" name="sex" value="male" />
+				<label for="radio_b1"></label>
+				男
+				<input class="radio_b" id="radio_b2" type="radio" name="sex" value="female" />
+				<label for="radio_b2"></label>
+				女
+			</div>
+			<div class="row">
+				<div class="left_text">兴趣爱好：</div>
+				<input class="checkbox_b" id="checkbox_b1" type="checkbox" name="music" />
+				<label for="checkbox_b1"></label>
+				音乐
+				<input class="checkbox_b" id="checkbox_b2" type="checkbox" name="art" />
+				<label for="checkbox_b2"></label>
+				艺术
+				<input class="checkbox_b" id="checkbox_b3" type="checkbox" name="science" />
+				<label for="checkbox_b3"></label>
+				科学
+			</div>
+		</form>
+	</body>
+</html>
