@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用CSS实现折叠面板</title>
+		<style type="text/css">
+			p{
+				margin: 0;
+				padding: 0;
+			}
+			#wrap{
+				width: 1000px;
+				margin: 0 auto;
+			}
+			#wrap .row{
+				margin-bottom: 10px;
+			}
+			
+			/*隐藏选项框*/
+			#wrap input[type='radio']{
+				display: none;
+				cursor: pointer;
+			}
+			.radio+label{
+				display: inline-block;
+				width: 400px;
+				height: 40px;
+				border: 1px solid #F47920;
+				border-radius: 10px;
+				padding: 5px;
+				text-align: center;
+				line-height: 40px;
+				cursor: pointer;
+				/*transition: all .1s linear;*/
+				position: relative;
+			}
+			.radio:checked+label{
+				background: #F47920;
+				font-weight: bold;
+				color: #fff;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			.text_wrap{
+				height: 0;
+				overflow: hidden;
+				transition: all .3s linear;
+			}
+			.test{
+				width: 400px;
+				height: 300px;
+				padding: 5px;
+				border: 1px solid #F47920;
+				border-top: none;
+				overflow: hidden;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+			}
+			.radio:checked+label+div.text_wrap{
+				height: 315px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<form id="wrap">
+			<div class="row">
+				<input class="radio" type="radio" id="con1" name="con" />
+				<label for="con1">Collapsible Group Item #1</label>
+				<div class="text_wrap">
+					<p class="test">
+						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<input class="radio" type="radio" id="con2" name="con" />
+				<label for="con2">Collapsible Group Item #2</label>
+				<div class="text_wrap">
+					<p class="test">
+						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<input class="radio" type="radio" id="con3" name="con" />
+				<label for="con3">Collapsible Group Item #3</label>
+				<div class="text_wrap">
+					<p class="test">
+						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					</p>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
