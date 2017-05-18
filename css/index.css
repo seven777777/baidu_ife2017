@@ -13,6 +13,8 @@
 }
 .item .pic{
 	width: 100%;
+	height: 162px;
+	overflow: hidden;
 }
 .item .pic img{
 	display: block;
